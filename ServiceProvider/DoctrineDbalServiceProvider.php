@@ -26,7 +26,7 @@ class DoctrineDbalServiceProvider implements ServiceProviderInterface
     {
         $serviceContainer['doctrine_dbal.connection_configuration'] = array(
             'driver' => 'pdo_sqlite',
-            'memory' => true,
+            'memory' => false,
         );
 
         $serviceContainer['doctrine_dbal.event_manager'] = $serviceContainer->share(
